@@ -72,6 +72,8 @@ public class RecordController {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(!updated) {
+					tableView.clearTables();
+
 					for(Student record: model.getRecordsUG()) {
 						String[] values = new String[] {record.rollNo, record.name, record.course, record.department};
 						tableView.addRowUG(values);
@@ -99,9 +101,12 @@ public class RecordController {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				int conformation = JOptionPane.YES_OPTION;
-				if(!saved)
+				if(!saved) {
 					conformation = JOptionPane.showConfirmDialog(entryView, "Exit without saving?", "Conformation", JOptionPane.YES_NO_OPTION);
-				if(conformation == JOptionPane.YES_OPTION)
+					if(conformation == JOptionPane.YES_OPTION)
+						System.exit(0);
+				}
+				else
 					System.exit(0);
 			}
 		});
@@ -163,6 +168,8 @@ public class RecordController {
 				tableView.addRowPG(values);
 				break;
 			}
+
+			saved = false;
 		}
 		catch (IncompleteFieldsException e) {
 			JOptionPane.showMessageDialog(entryView, "Please fill all the fields.", "InputError", JOptionPane.ERROR_MESSAGE);
