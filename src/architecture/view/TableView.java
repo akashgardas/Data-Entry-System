@@ -132,4 +132,12 @@ public class TableView extends JFrame {
 	public void setViewLocationRelativeTo(JFrame frame) {
 		setLocation(frame.getX() + frame.getWidth() + 5, frame.getY() - 50);
 	}
+
+	/**
+	 * Clears all the rows.
+	 */
+	public void clearTables() {
+		defaultTableUG.setRowCount(0);
+		defaultTablePG.setRowCount(0);
+	}
 }
