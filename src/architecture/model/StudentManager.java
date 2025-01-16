@@ -38,7 +38,7 @@ public class StudentManager {
 	 * If couldn't load the records, initializes {@link #recordsUG} and {@link #recordsPG} with empty {@link ArrayList}.
 	 */
 	public StudentManager() {
-		storageUG = new ObjectStorage("MVC_UG_students.txt");
+		storageUG = new ObjectStorage("../MVC_UG_students.txt");
 		try {
 			recordsUG = storageUG.loadRecords();
 		} catch (Exception e) {
@@ -47,7 +47,7 @@ public class StudentManager {
 //			System.out.println(e.toString());
 		}
 		
-		storagePG = new ObjectStorage("MVC_PG_students.txt");
+		storagePG = new ObjectStorage("../MVC_PG_students.txt");
 		try {
 			recordsPG = storagePG.loadRecords();
 		} catch (Exception e) {
