@@ -1,0 +1,12 @@
+applications
+architecture
+architecture.controller
+architecture.model
+architecture.view
+entry
+exception
+storage
+storage.filehandling
+student
+student.pg
+student.ug
