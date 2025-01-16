@@ -43,6 +43,17 @@ Welcome to the **Data Entry System** project! This is a Java-based application d
    git clone https://github.com/<your-username>/Data-Entry-System.git
 2. Compile and run the project using your Java IDE or terminal.
 
+  ### Compiling and running in terminal
+  1. Go to the `src` directory and run the following
+      ```bash
+      javac -d ../bin applications/*.java
+  2. Go to the `bin` directory in the `Data-Entry-System` and run the following
+      ```bash
+      java applications/App3
+  3. The application will launch, and you can interact with it as desired.
+
+**NOTE**: Launching the application (Version 3.0) will display the storage files path on the terminal/console.
+
 ---
 
 ## 🚀 Upcoming Features
